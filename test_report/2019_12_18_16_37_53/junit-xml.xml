@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="4" failures="0" hostname="hanwenlu" name="pytest" skipped="0" tests="4" time="11.533" timestamp="2019-12-18T16:37:56.386331"><testcase classname="test_dir.test_baidu.TestSearch" file="test_dir\test_baidu.py" line="26" name="test_baidu_search_case" time="0.001"><error message="test setup failure">file E:\yuxichen\pytest\test_dir\test_baidu.py, line 27
+      def test_baidu_search_case(self, browser, base_url):
+E       fixture &apos;browser&apos; not found
+&gt;       available fixtures: base_url, browser_close, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+E:\yuxichen\pytest\test_dir\test_baidu.py:27</error></testcase><testcase classname="test_dir.test_baidu.TestSearchSettings" file="test_dir\test_baidu.py" line="47" name="test_baidu_search_setting" time="0.002"><error message="test setup failure">file E:\yuxichen\pytest\test_dir\test_baidu.py, line 48
+      def test_baidu_search_setting(self, browser, base_url):
+E       fixture &apos;browser&apos; not found
+&gt;       available fixtures: base_url, browser_close, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+E:\yuxichen\pytest\test_dir\test_baidu.py:48</error></testcase><testcase classname="test_dir.test_parametrize" file="test_dir\test_parametrize.py" line="47" name="test_baidu_search[1-Selenium]" time="0.002"><error message="test setup failure">file E:\yuxichen\pytest\test_dir\test_parametrize.py, line 48
+  @pytest.mark.parametrize(
+      &quot;name, search_key&quot;,
+      get_data(base_path + &quot;/test_dir/data/data_file.json&quot;)
+  )
+  def test_baidu_search(name, search_key, browser, base_url):
+E       fixture &apos;browser&apos; not found
+&gt;       available fixtures: base_url, browser_close, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+E:\yuxichen\pytest\test_dir\test_parametrize.py:48</error></testcase><testcase time="0.000"></testcase><testcase classname="pytest" name="internal" time="0.000"><error message="internal error">Traceback (most recent call last):
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py&quot;, line 157, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py&quot;, line 84, in create_connection
+    raise err
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py&quot;, line 74, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py&quot;, line 672, in urlopen
+    chunked=chunked,
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py&quot;, line 387, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py&quot;, line 1244, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py&quot;, line 1290, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py&quot;, line 1239, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py&quot;, line 1026, in _send_output
+    self.send(msg)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\http\client.py&quot;, line 966, in send
+    self.connect()
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py&quot;, line 184, in connect
+    conn = self._new_conn()
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py&quot;, line 169, in _new_conn
+    self, &quot;Failed to establish a new connection: %s&quot; % e
+urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.HTTPConnection object at 0x000001EBAF45FB08&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 196, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 246, in _main
+    config.hook.pytest_runtestloop(session=session)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\main.py&quot;, line 270, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 208, in _multicall
+    return outcome.get_result()
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 80, in get_result
+    raise ex[1].with_traceback(ex[2])
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 187, in _multicall
+    res = hook_impl.function(*args)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pytest_rerunfailures.py&quot;, line 176, in pytest_runtest_protocol
+    reports = runtestprotocol(item, nextitem=nextitem, log=False)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 90, in runtestprotocol
+    rep = call_and_report(item, &quot;setup&quot;, log)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\_pytest\runner.py&quot;, line 184, in call_and_report
+    report = hook.pytest_runtest_makereport(item=item, call=call)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\hooks.py&quot;, line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\manager.py&quot;, line 87, in &lt;lambda&gt;
+    firstresult=hook.spec.opts.get(&quot;firstresult&quot;) if hook.spec else False,
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\pluggy\callers.py&quot;, line 203, in _multicall
+    gen.send(outcome)
+  File &quot;E:\yuxichen\pytest\conftest.py&quot;, line 74, in pytest_runtest_makereport
+    capture_screenshot(case_name)
+  File &quot;E:\yuxichen\pytest\conftest.py&quot;, line 122, in capture_screenshot
+    driver.save_screenshot(image_dir)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 1055, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 1032, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 1064, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode(&apos;ascii&apos;))
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 1074, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)[&apos;value&apos;]
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webdriver.py&quot;, line 319, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\remote_connection.py&quot;, line 374, in execute
+    return self._request(command_info[0], url, body=data)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\remote_connection.py&quot;, line 397, in _request
+    resp = self._conn.request(method, url, body=body, headers=headers)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\request.py&quot;, line 76, in request
+    method, url, fields=fields, headers=headers, **urlopen_kw
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\request.py&quot;, line 97, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\poolmanager.py&quot;, line 330, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py&quot;, line 762, in urlopen
+    **response_kw
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py&quot;, line 762, in urlopen
+    **response_kw
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py&quot;, line 762, in urlopen
+    **response_kw
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py&quot;, line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File &quot;C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py&quot;, line 436, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host=&apos;127.0.0.1&apos;, port=55652): Max retries exceeded with url: /session/ba52861f5fffa6a65f183837156a98c4/screenshot (Caused by NewConnectionError(&apos;&lt;urllib3.connection.HTTPConnection object at 0x000001EBAF45FB08&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。&apos;))</error></testcase></testsuite></testsuites>

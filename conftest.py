@@ -10,7 +10,6 @@ from selenium.webdriver.firefox.options import Options as FF_Options
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = BASE_DIR + "/test_report/"
 
-
 ############################
 
 # 配置浏览器驱动类型(chrome/firefox/chrome-headless/firefox-headless)。
@@ -20,7 +19,7 @@ driver_type = "chrome"
 url = "https://www.baidu.com"
 
 # 失败重跑次数
-rerun = "3"
+rerun = "1"
 
 # 当达到最大失败数，停止执行
 max_fail = "5"
@@ -28,9 +27,19 @@ max_fail = "5"
 # 运行测试用例的目录或文件
 cases_path = "./test_dir/"
 
+
 ############################
+'''
+fixture里面有个scope参数可以控制fixture的作用范围：session>module>class>function
 
+-function：每一个函数或方法都会调用
 
+-class：每一个类调用一次，一个类中可以有多个方法
+
+-module：每一个.py文件调用一次，该文件内又有多个function和class
+
+-session：是多个文件调用一次，可以跨.py文件调用，每个.py文件就是module
+'''
 # 定义基本测试环境
 @pytest.fixture(scope='function')
 def base_url():
@@ -96,7 +105,7 @@ def description_html(desc):
             desc_ = desc_ + ";"
         else:
             desc_ = desc_ + desc[i]
-    
+
     desc_lines = desc_.split(";")
     desc_html = html.html(
         html.head(
@@ -112,6 +121,7 @@ def capture_screenshot(case_name):
     :param case_name: 用例名
     :return:
     """
+    #driver = webdriver.Chrome()
     global driver
     file_name = case_name.split("/")[-1]
     new_report_dir = new_report_time()
@@ -171,13 +181,13 @@ def browser():
         # 通过远程节点运行
         driver = Remote(command_executor='http://10.2.16.182:4444/wd/hub',
                         desired_capabilities={
-                              "browserName": "chrome",
+                            "browserName": "chrome",
                         })
         driver.set_window_size(1920, 1080)
 
     else:
         raise NameError("driver驱动类型定义错误！")
-
+    #driver=webdriver.Chrome()
     return driver
 
 

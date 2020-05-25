@@ -16,13 +16,13 @@ from page.baidu_page import BaiduPage
 
 @pytest.mark.parametrize(
     "name, search_key",
-    [("1", "Selenium"),
-     ("2", "pytest文档"),
-     ("3", "pytest-html"),
+    [("1", "A"),
+     ("2", "B"),
+     ("3", "C")
      ],
     ids=["case1", "case2", "case3"]
 )
-def test_baidu_search(self, name, search_key, browser, base_url):
+def test_baidu_search(name, search_key, browser, base_url):
     page = BaiduPage(browser)
     page.get(base_url)
     page.search_input = search_key

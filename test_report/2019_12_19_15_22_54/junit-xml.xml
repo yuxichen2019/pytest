@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="3" failures="0" hostname="hanwenlu" name="pytest" skipped="0" tests="3" time="13.952" timestamp="2019-12-19T15:22:54.468729"><testcase classname="test_dir.test_parametrize" file="test_dir\test_parametrize.py" line="16" name="test_baidu_search[case1]" time="3.456"><error message="test setup failure">file E:\yuxichen\pytest\test_dir\test_parametrize.py, line 17
+  @pytest.mark.parametrize(
+      &quot;name, search_key&quot;,
+      [(&quot;1&quot;, &quot;A&quot;),
+       (&quot;2&quot;, &quot;B&quot;),
+       (&quot;3&quot;, &quot;C&quot;)
+       ],
+      ids=[&quot;case1&quot;, &quot;case2&quot;, &quot;case3&quot;]
+  )
+  def test_baidu_search(self, name, search_key, browser, base_url):
+E       fixture &apos;self&apos; not found
+&gt;       available fixtures: base_url, browser, browser_close, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+E:\yuxichen\pytest\test_dir\test_parametrize.py:17</error></testcase><testcase classname="test_dir.test_parametrize" file="test_dir\test_parametrize.py" line="16" name="test_baidu_search[case2]" time="0.000"><error message="test setup failure">file E:\yuxichen\pytest\test_dir\test_parametrize.py, line 17
+  @pytest.mark.parametrize(
+      &quot;name, search_key&quot;,
+      [(&quot;1&quot;, &quot;A&quot;),
+       (&quot;2&quot;, &quot;B&quot;),
+       (&quot;3&quot;, &quot;C&quot;)
+       ],
+      ids=[&quot;case1&quot;, &quot;case2&quot;, &quot;case3&quot;]
+  )
+  def test_baidu_search(self, name, search_key, browser, base_url):
+E       fixture &apos;self&apos; not found
+&gt;       available fixtures: base_url, browser, browser_close, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+E:\yuxichen\pytest\test_dir\test_parametrize.py:17</error></testcase><testcase classname="test_dir.test_parametrize" file="test_dir\test_parametrize.py" line="16" name="test_baidu_search[case3]" time="5.703"><error message="test setup failure">file E:\yuxichen\pytest\test_dir\test_parametrize.py, line 17
+  @pytest.mark.parametrize(
+      &quot;name, search_key&quot;,
+      [(&quot;1&quot;, &quot;A&quot;),
+       (&quot;2&quot;, &quot;B&quot;),
+       (&quot;3&quot;, &quot;C&quot;)
+       ],
+      ids=[&quot;case1&quot;, &quot;case2&quot;, &quot;case3&quot;]
+  )
+  def test_baidu_search(self, name, search_key, browser, base_url):
+E       fixture &apos;self&apos; not found
+&gt;       available fixtures: base_url, browser, browser_close, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, metadata, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+&gt;       use &apos;pytest --fixtures [testpath]&apos; for help on them.
+
+E:\yuxichen\pytest\test_dir\test_parametrize.py:17</error></testcase></testsuite></testsuites>
